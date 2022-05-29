@@ -28116,6 +28116,7 @@ with pkgs;
   minidjvu = callPackage ../applications/graphics/minidjvu { };
 
   minikube = callPackage ../applications/networking/cluster/minikube {
+    buildGoModule = buildGo118Module;
     inherit (darwin.apple_sdk.frameworks) vmnet;
   };
 
