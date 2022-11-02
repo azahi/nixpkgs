@@ -36,8 +36,6 @@ stdenv.mkDerivation rec {
     "-DUSE_SYSTEM_TZ_DB=true"
   ];
 
-  outputs = [ "out" "dev" ];
-
   meta = with lib; {
     license = licenses.mit;
     description = "A date and time library based on the C++11/14/17 <chrono> header";
