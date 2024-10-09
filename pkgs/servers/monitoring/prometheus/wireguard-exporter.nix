@@ -16,6 +16,9 @@ rustPlatform.buildRustPackage rec {
   postPatch = ''
     # drop hardcoded linker names, fixing static build
     rm .cargo/config.toml
+
+    substituteInPlace src/main.rs \
+      --replace-fail '("wg")' '("awg")'
   '';
 
   buildInputs = lib.optionals stdenv.hostPlatform.isDarwin [ libiconv Security ];

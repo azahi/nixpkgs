@@ -54,7 +54,7 @@ in {
     };
   };
   serviceOpts = {
-    path = [ pkgs.wireguard-tools ];
+    path = [ pkgs.amneziawg-tools ];
 
     serviceConfig = {
       AmbientCapabilities = [ "CAP_NET_ADMIN" ];
